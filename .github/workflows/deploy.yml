@@ -37,5 +37,7 @@ jobs:
           ssh-add ~/.ssh/id_ecdsa || :
           ssh-keyscan -H $SRV >> ~/.ssh/known_hosts ||:
           sudo snap install hugo
-          ls -al
+          hugo
+          rsync -avz --delete public/ deploy@$SRV:~/html/
           
+
