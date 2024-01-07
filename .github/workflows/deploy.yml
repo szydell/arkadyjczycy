@@ -37,3 +37,5 @@ jobs:
           ssh-add ~/.ssh/id_ecdsa || :
           ssh-keyscan -H $SRV >> ~/.ssh/known_hosts ||:
           sudo snap install hugo
+          ls -al
+          
