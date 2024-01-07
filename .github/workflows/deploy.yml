@@ -33,11 +33,11 @@ jobs:
           chmod 700 ~/.ssh
           echo "$KEY" >> ~/.ssh/id_ecdsa
           chmod 600 ~/.ssh/id_ecdsa
-          eval "$(ssh-agent -s)"
-          ssh-add ~/.ssh/id_ecdsa || :
+          # eval "$(ssh-agent -s)"
+          # ssh-add ~/.ssh/id_ecdsa || :
           ssh-keyscan -H $SRV >> ~/.ssh/known_hosts ||:
           sudo snap install hugo
           hugo
-          rsync -avz --delete public/ deploy@$SRV:~/html/
-          
+          rsync -e "ssh -i $HOME/.ssh/id_ecdsa -p667" -avz --delete public/ deploy@$SRV:html/
+
 
