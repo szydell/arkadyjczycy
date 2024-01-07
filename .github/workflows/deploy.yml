@@ -35,11 +35,10 @@ jobs:
           chmod 600 ~/.ssh/id_ecdsa
           # eval "$(ssh-agent -s)"
           # ssh-add ~/.ssh/id_ecdsa || :
-          ssh-keyscan -H $SRV >> ~/.ssh/known_hosts ||:
+          ssh-keyscan -H $SRV -p667 >> ~/.ssh/known_hosts ||:
           sudo snap install hugo
           hugo
-          cat $HOME/.ssh/id_ecdsa
-          ssh -vvv -i $HOME/.ssh/id_ecdsa -p667 deploy@$SRV "echo 'aaa'"
-          rsync -e "ssh -i $HOME/.ssh/id_ecdsa -p667" -avz --delete public/ deploy@$SRV:html/
+          ssh -vvv -o BatchMode=yes -i $HOME/.ssh/id_ecdsa -p667 deploy@$SRV "echo 'aaa'"
+          rsync -e "ssh -i $HOME/.ssh/id_ecdsa -p667 -o BatchMode=yes" -avz --delete public/ deploy@$SRV:html/
 
 
