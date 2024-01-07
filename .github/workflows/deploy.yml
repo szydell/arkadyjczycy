@@ -36,4 +36,4 @@ jobs:
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_ecdsa
           ssh-keyscan -H $SRV >> ~/.ssh/known_hosts
-          ssh -p667 deploy@$SRV "echo $(hostname)"
+          ssh -vvv -p667 deploy@$SRV "echo $(hostname)"
