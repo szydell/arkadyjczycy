@@ -35,7 +35,7 @@ jobs:
           chmod 600 ~/.ssh/id_ecdsa
           # eval "$(ssh-agent -s)"
           # ssh-add ~/.ssh/id_ecdsa || :
-          ssh-keyscan -H $SRV -p667 >> ~/.ssh/known_hosts ||:
+          ssh-keyscan -p 667 -H $SRV >> ~/.ssh/known_hosts ||:
           sudo snap install hugo
           hugo
           ssh -vvv -o BatchMode=yes -i $HOME/.ssh/id_ecdsa -p667 deploy@$SRV "echo 'aaa'"
