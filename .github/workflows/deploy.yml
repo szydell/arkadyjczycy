@@ -34,6 +34,6 @@ jobs:
           echo "$KEY" >> ~/.ssh/id_ecdsa
           chmod 600 ~/.ssh/id_ecdsa
           eval "$(ssh-agent -s)"
-          ssh-add ~/.ssh/id_ecdsa
-          ssh-keyscan -H $SRV >> ~/.ssh/known_hosts
+          ssh-add ~/.ssh/id_ecdsa || :
+          ssh-keyscan -H $SRV >> ~/.ssh/known_hosts ||:
           ssh -vvv -p667 deploy@$SRV "echo $(hostname)"
