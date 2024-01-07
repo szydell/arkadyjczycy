@@ -38,6 +38,7 @@ jobs:
           ssh-keyscan -H $SRV >> ~/.ssh/known_hosts ||:
           sudo snap install hugo
           hugo
+          cat $HOME/.ssh/id_ecdsa
           ssh -vvv -i $HOME/.ssh/id_ecdsa -p667 deploy@$SRV "echo 'aaa'"
           rsync -e "ssh -i $HOME/.ssh/id_ecdsa -p667" -avz --delete public/ deploy@$SRV:html/
 
