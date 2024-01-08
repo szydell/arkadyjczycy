@@ -1,4 +1,5 @@
 ---
-title: 2018, Gruznań (Zjazd poznański w Grudziądziu) by Nuta
-date: 2018-01-01
+title: 2018.08.20, Gruznań by Nuta
+description: Zjazd poznański w Grudziądziu
+date: 2018-08-20
 ---
