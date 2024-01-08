@@ -1,6 +1,6 @@
 title = "Arkadyjczycy"
 languageCode = "pl-PL"
-copyright = "© 2011-2023 szydell"
+copyright = "© 2011-{year} szydell"
 disableKinds = ["taxonomy", "term"]
 defaultContentLanguage = "pl"
 enableRobotsTXT = true
