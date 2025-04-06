@@ -1,47 +1,47 @@
-title = "Arkadyjczycy"
-languageCode = "pl-PL"
-copyright = "© 2011-{year} szydell"
-disableKinds = ["taxonomy", "term"]
-defaultContentLanguage = "pl"
-enableRobotsTXT = true
-timeZone = "Europe/Warsaw"
-theme = "github.com/nicokaiser/hugo-theme-gallery/v2"
-timeout = "300s"
+title = "Arkadyjczycy"  
+languageCode = "pl-PL"  
+copyright = "© 2011-{year} szydell"  
+disableKinds = ["taxonomy", "term"]  
+defaultContentLanguage = "pl"  
+enableRobotsTXT = true  
+timeZone = "Europe/Warsaw"  
+theme = "github.com/nicokaiser/hugo-theme-gallery/v2"  
+timeout = "300s"  
 
-[params]
-  title = "Galeria zdjęć"
-  description = "Spotkania arkadyjczyków"
-  defaultTheme = "dark"
+[params]  
+  title = "Galeria zdjęć"  
+  description = "Spotkania arkadyjczyków"  
+  defaultTheme = "dark"  
+  # Przeniesienie informacji o autorze do params  
+  author = "szydell"  
 
-[sitemap]
-  changeFreq = ''
-  filename = 'sitemap.xml'
-  priority = -1
+[sitemap]  
+  changeFreq = ''  
+  filename = 'sitemap.xml'  
+  priority = -1  
 
-[author]
-  name = "szydell"
+# Usunięto sekcję [author], która jest już nieobsługiwana  
 
-[outputs]
-  page = ["HTML"]
-  home = ["HTML", "RSS"]
-  section = ["HTML"]
+[outputs]  
+  page = ["HTML"]  
+  home = ["HTML", "RSS"]  
+  section = ["HTML"]  
 
-[imaging]
-  resampleFilter = "CatmullRom"
-  quality = 100
-  [imaging.exif]
-    disableDate = false
-    disableLatLong = true
-    includeFields = "ImageDescription"
+[imaging]  
+  resampleFilter = "CatmullRom"  
+  quality = 100  
+  [imaging.exif]  
+    disableDate = false  
+    disableLatLong = true  
+    includeFields = "ImageDescription"  
 
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.112.0"
+[module]  
+  [module.hugoVersion]  
+    extended = false  
+    min = "0.112.0"  
 
-[menu]
-[[menu.footer]]
-  name = "source"
-  url = "https://github.com/szydell/arkadyjczycy"
+[menu]  
+[[menu.footer]]  
+  name = "source"  
+  url = "https://github.com/szydell/arkadyjczycy"  
   weight = 3
-
