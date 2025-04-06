@@ -41,7 +41,7 @@ timeout = "300s"
 
 [menu]
 [[menu.footer]]
-  name = "site source"
+  name = "source"
   url = "https://github.com/szydell/arkadyjczycy"
   weight = 3
 
